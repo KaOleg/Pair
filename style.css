@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body {
+    background-color: #f8efba;
+    overflow: hidden;
+}
+.game {
+    margin: 30px auto;
+    width: 60%;
+    display: flex;
+    height: calc(100vh - 60px);
+    flex-wrap: wrap;
+}
+.card {
+    background-color: #25ccf7;
+    width: calc(25% - 10px);
+    margin: 5px;
+    height: calc(33.3% - 10px);
+    cursor: pointer;
+    border-radius: 10px;
+    position: relative;
+    transition: transform 0.5s;
+    transform-style: preserve-3d;
+}
+.backface,
+.frontface {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    padding: 20px;
+    backface-visibility: hidden;
+}
+.flip{
+    transform: rotateY(180deg);
+
+}
+.frontface{
+    transform: rotateY(180deg);
+
+}
